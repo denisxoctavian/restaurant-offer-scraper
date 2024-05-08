@@ -17,4 +17,10 @@ public interface RestaurantRepository extends JpaRepository<Restaurant, Integer>
             nativeQuery = true
     )
     List<Restaurant> findAllRestaurants();
+
+    @Query(
+            value="SELECT * FROM Restaurant WHERE location =?1",
+            nativeQuery = true
+    )
+    List<Restaurant> findAllRestaurantsByLocation(String location);
 }

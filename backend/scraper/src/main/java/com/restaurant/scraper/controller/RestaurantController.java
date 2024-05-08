@@ -30,9 +30,15 @@ public class RestaurantController {
         return  new ResponseEntity<>(restaurants,HttpStatus.OK);
     }
 
-    @GetMapping("/find/{id}")
+    @GetMapping("/findById/{id}")
     public ResponseEntity<Restaurant> getRestaurantById(@PathVariable("id") int id){
         Restaurant restaurant = service.findRestaurantById(id);
         return  new ResponseEntity<>(restaurant, HttpStatus.OK);
+    }
+
+    @GetMapping("findByLocation/{location}")
+    public ResponseEntity<List<Restaurant>> getRestaurantsByLocation(@PathVariable("location") String location){
+        List<Restaurant> restaurants = service.findRestaurantsByLocation(location);
+        return new ResponseEntity<>(restaurants,HttpStatus.OK);
     }
 }

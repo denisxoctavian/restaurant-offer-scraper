@@ -27,4 +27,8 @@ public class RestaurantService {
     public List<Restaurant> findAll(){
         return restaurantRepo.findAllRestaurants();
     }
+
+    public List<Restaurant> findRestaurantsByLocation(String location){ return restaurantRepo.findAllRestaurantsByLocation(location);}
+
+    
 }

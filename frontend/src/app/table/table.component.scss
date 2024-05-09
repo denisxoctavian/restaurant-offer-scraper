@@ -1,4 +1,30 @@
-.table-container {
-    margin-left: 50px;
-    margin-right: 50px;
+mat-header-cell {
+    font-weight: 500;
+    color: white;
+}
+
+mat-header-row::ng-deep {
+    background-color: #f86c6c;
+    color: white;
+}
+
+.mat-mdc-form-field {
+    font-size: 14px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+#add-button {
+    margin-top: 10px;
+    width: 200px !important;
+}
+
+mat-paginator::ng-deep {
+    font-weight: 500;
+    border: 1px solid rgb(221, 220, 220);
+    box-shadow: -5px 0px 10px 1px rgba(228, 227, 227, 0.8);
+}
+
+::ng-deep .mat-sort-header-arrow {
+    color: white;
 }

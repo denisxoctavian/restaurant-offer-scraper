@@ -12,6 +12,38 @@ body {
     font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
+$custom-accent-palette: (
+    50 : #edf4fe,
+    100 : #d3e4fd,
+    200 : #b6d2fc,
+    300 : #98bffa,
+    400 : #82b2f9,
+    500 : #6ca4f8,
+    600 : #649cf7,
+    700 : #5992f6,
+    800 : #4f89f5,
+    900 : #3d78f3,
+    A100 : #ffffff,
+    A200 : #ffffff,
+    A400 : #dae5ff,
+    A700 : #c0d3ff,
+    contrast: (50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #000000,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
 $custom-primary-palette: (
     50 : #feeded,
     100 : #fdd3d3,
@@ -48,7 +80,7 @@ $custom-typography: mat.define-typography-config($font-family: "Carme, serif",
     );
 
 $custom-primary: mat.define-palette($custom-primary-palette);
-$custom-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$custom-accent: mat.define-palette($custom-accent-palette);
 $custom-warn: mat.define-palette(mat.$red-palette);
 
 $custom-theme: mat.define-light-theme((color:(primary: $custom-primary,
